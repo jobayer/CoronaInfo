@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "498509131227",
+    "firebase_url": "https://coronainfo-bd.firebaseio.com",
+    "project_id": "coronainfo-bd",
+    "storage_bucket": "coronainfo-bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498509131227:android:2b9bbbaa531c11962a8bfe",
+        "android_client_info": {
+          "package_name": "com.jobayer.coronainfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498509131227-6qi7usvv6r0ttri3oaik5kg5tiajpdiu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jobayer.coronainfo",
+            "certificate_hash": "d97218d5db550e8de8779cf2e386c0e7cd59228f"
+          }
+        },
+        {
+          "client_id": "498509131227-2c5t9415ddth0h5r4vcv2io1alpdm50e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPZQUOQwH6G5X9iJRVjrFOZye90L9H1DM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498509131227-2c5t9415ddth0h5r4vcv2io1alpdm50e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
