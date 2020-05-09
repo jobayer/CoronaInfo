@@ -11,6 +11,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.jobayer.coronainfo.R
 import com.jobayer.coronainfo.activities.DistrictInfoActivity
+import com.jobayer.coronainfo.extensions.toBangla
 import com.jobayer.coronainfo.model.District
 import kotlinx.android.synthetic.main.district_item.view.*
 
@@ -39,12 +40,20 @@ class DistrictListAdapter(private val activity: Activity, private val districtLi
 
         fun bindView(activity: Activity, position: Int, district: District) {
             name.text = district.bnname
-            number.text = district.confirmed.toString()
+            number.text = district.confirmed.toString().toBangla()
             if (position % 2 == 0) {
                 rootView.setBackgroundColor(
                     ResourcesCompat.getColor(
                         activity.resources,
                         R.color.grayLineColor,
+                        activity.theme
+                    )
+                )
+            } else {
+                rootView.setBackgroundColor(
+                    ResourcesCompat.getColor(
+                        activity.resources,
+                        R.color.white,
                         activity.theme
                     )
                 )

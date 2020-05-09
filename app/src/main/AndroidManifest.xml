@@ -3,16 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.jobayer.coronainfo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:name=".CoronaInfo"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".activities.DistrictInfoActivity"></activity>
+        <activity android:name=".activities.HelpCenterActivity"></activity>
+        <activity android:name=".activities.LicenseDetailsActivity" />
+        <activity android:name=".activities.LicenseActivity" />
+        <activity android:name=".activities.AboutActivity" />
+        <activity android:name=".activities.MoreInfoActivity" />
+        <activity android:name=".activities.DistrictInfoActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

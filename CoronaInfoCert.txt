@@ -1,0 +1,12 @@
+CoronaInfoKeyStore
+Pass: :GoCorona
+
+Key: primaryKey
+Pass: GoCorona::
+
+Name: Md Joabyer
+Organization Unit: Single
+Organization: Personal
+City: Faridpur
+State: Dhaka
+Country Code: BD

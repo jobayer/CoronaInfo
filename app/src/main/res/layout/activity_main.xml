@@ -27,23 +27,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:text="সর্বশেষ আপডেট"
+                android:text="সর্বশেষ হালনাগাদ"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/text_update_time_main"
+                android:id="@+id/lastUpdateTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:text="Last Update Time"
+                android:text="সময়"
                 android:textColor="@color/green"
                 android:textSize="12sp" />
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/image_refresh"
+            android:id="@+id/updateButton"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_gravity="center"
@@ -61,7 +61,10 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1"
             app:cardBackgroundColor="@color/orangeBg"
             app:cardCornerRadius="8dp"
@@ -77,16 +80,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="নতুন নমুনা সংগ্রহ"
+                    android:text="নতুন পরীক্ষা"
                     android:textColor="@color/orange"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/newSampleCollectionCounter"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="0"
+                    android:text="০"
                     android:textColor="@color/orange"
                     android:textSize="20sp" />
 
@@ -97,9 +101,9 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1"
             app:cardBackgroundColor="@color/redBg"
             app:cardCornerRadius="8dp"
@@ -121,10 +125,11 @@
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/newAffectedCounter"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="0"
+                    android:text="০"
                     android:textColor="@color/red"
                     android:textSize="20sp" />
 
@@ -144,8 +149,8 @@
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
             android:layout_weight="1"
             app:cardBackgroundColor="@color/greenBg"
             app:cardCornerRadius="8dp"
@@ -167,10 +172,11 @@
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/newRecoveredCounter"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="0"
+                    android:text="০"
                     android:textColor="@color/green"
                     android:textSize="20sp" />
 
@@ -182,7 +188,7 @@
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="2dp"
             android:layout_weight="1"
             app:cardBackgroundColor="@color/grayBg"
             app:cardCornerRadius="8dp"
@@ -204,10 +210,11 @@
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/newDeathCounter"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="0"
+                    android:text="০"
                     android:textColor="@color/gray"
                     android:textSize="20sp" />
 
@@ -217,21 +224,48 @@
 
     </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="আরও দেখুন"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:backgroundTint="@color/redLineColor" />
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/moreInfoButton"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="আরও দেখুন"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:backgroundTint="#f5f5f5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/helpCenterButton"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="সাহায্য কেন্দ্র"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:backgroundTint="#f5f5f5" />
+
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:gravity="center">
@@ -263,6 +297,6 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="none"/>
+        android:scrollbars="none" />
 
 </LinearLayout>

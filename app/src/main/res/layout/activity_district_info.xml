@@ -32,10 +32,11 @@
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/districtTotalRecovered"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="0"
+                android:text="০"
                 android:textColor="@color/green"
                 android:textSize="20sp" />
 
@@ -76,10 +77,11 @@
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/districtTotalAffected"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="0"
+                    android:text="০"
                     android:textColor="@color/red"
                     android:textSize="20sp" />
 
@@ -113,10 +115,11 @@
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/districtTotalDeath"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="0"
+                    android:text="০"
                     android:textColor="@color/gray"
                     android:textSize="20sp" />
 
